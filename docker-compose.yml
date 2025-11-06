@@ -1,0 +1,24 @@
+
+
+services:
+  read_app:
+    build: ./read
+    container_name: read_container
+    volumes:
+      - data_volume:/home/votre-prenom/read/data
+    ports:
+      - "8081:5000"   
+
+  write_app:
+    build: ./write
+    container_name: write_container
+    volumes:
+      - data_volume:/home/votre-prenom/write/data
+    ports:
+      - "8080:5000"   
+    stdin_open: true
+    tty: true
+
+
+volumes:
+  data_volume:

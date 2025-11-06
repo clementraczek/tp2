@@ -160,13 +160,13 @@ def delete_movie():
 
 def menu():
     while True:
-        print("\n===== Gestion des Films =====")
+     
         print("1. Ajouter un film")
         print("2. Modifier un film")
         print("3. Supprimer un film")
         print("4. Quitter")
         
-        choice = input("Choisissez une option (1-4): ").strip()
+        choice = input("Choisissez une option: ").strip()
         
         if choice == "1":
             add_movie()
