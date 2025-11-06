@@ -14,7 +14,7 @@ class Movie:
 
     def __str__(self):
 
-        return (f"🎬 {self.titre} ({self.annee_production})\n"
+        return (f"{self.titre} ({self.annee_production})\n"
                 f"   Genre : {self.genre}\n"
                 f"   Âge minimum : {self.age_limite} ans\n"
                 f"   ID : {self.id}")
