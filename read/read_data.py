@@ -51,39 +51,39 @@ def main():
             titre = input("Entrez le titre du film : ")
             film = get_movie_by_title(titre)
             if film:
-                print(f"\n Film trouvé : {film['titre']} ({film['annee_production']}) - Genre : {film['genre']} - Âge limite : {film['age_limite']}")
+                print(f"Film trouvé : {film['titre']} ({film['annee_production']}) - Genre : {film['genre']} - Âge limite : {film['age_limite']}")
             else:
-                print("\ Film non trouvé.")
+                print("Film non trouvé.")
         
         elif choix == "2":
             genre = input("Entrez le genre à rechercher : ")
             films = get_movies_by_genre(genre)
             if films:
-                print(f"\Films du genre '{genre}' :")
+                print(f"Films du genre '{genre}' :")
                 for f in films:
                     print(f"- {f['titre']} ({f['annee_production']}) - Âge limite : {f['age_limite']}")
             else:
-                print("\ Aucun film trouvé pour ce genre.")
+                print("Aucun film trouvé pour ce genre.")
 
         elif choix == "3":
             try:
                 age = int(input("Entrez la limite d’âge maximale : "))
                 films = get_movies_by_age_limit(age)
                 if films:
-                    print(f"\ Films avec une limite d’âge ≤ {age} :")
+                    print(f"Films avec une limite d’âge ≤ {age} :")
                     for f in films:
                         print(f"- {f['titre']} ({f['annee_production']}) - Genre : {f['genre']}")
                 else:
-                    print("\Aucun film trouvé avec cette limite d’âge.")
+                    print("Aucun film trouvé avec cette limite d’âge.")
             except ValueError:
                 print("Merci de saisir un nombre valide.")
 
         elif choix == "4":
-            print("\Au revoir !")
+            print("Au revoir !")
             break
 
         else:
-            print("\Choix invalide, veuillez réessayer.")
+            print("Choix invalide, veuillez réessayer.")
 
 
 if __name__ == "__main__":
