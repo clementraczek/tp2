@@ -1,12 +1,10 @@
-class Movie:
+class Movies:
 
     _id_counter = 31  
 
     def __init__(self, titre: str, annee_production: int, genre: str, age_limite: int):
-        self.id = Movie._id_counter
-        Movie._id_counter += 1
-
-        # Attributs d'instance
+        self.id = Movies._id_counter
+        Movies._id_counter += 1
         self.titre = titre
         self.annee_production = annee_production
         self.genre = genre
@@ -18,3 +16,5 @@ class Movie:
                 f"   Genre : {self.genre}\n"
                 f"   Âge minimum : {self.age_limite} ans\n"
                 f"   ID : {self.id}")
+
+

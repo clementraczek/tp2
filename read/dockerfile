@@ -1,0 +1,10 @@
+
+FROM python:latest
+
+WORKDIR /home/clement/read
+
+COPY . .
+
+EXPOSE 8080
+4
+CMD ["python", "read_data.py"]
